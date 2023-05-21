@@ -1,0 +1,13 @@
+name: github action play
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '19'
+      - run: npm install
+      - run: npm run build
+      - run: npm run test
