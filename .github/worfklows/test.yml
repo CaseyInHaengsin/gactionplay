@@ -1,5 +1,5 @@
 name: github action play
-on: workflow_dispatch
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
